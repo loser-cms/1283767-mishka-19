@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка</title>
+</head>
+
+<body>
+    <header class="header">
+        <img class="header__logo" src="#" alt="Логотип компании">
+        <nav class="dropdown header__dropdown">
+            <a href="#" class="dropdown__item dropdown__item--catalog">Каталог товаров</a>
+            <a href="#" class="dropdown__item dropdown__item--costomize">Вязание на заказ</a>
+            <a href="#" class="dropdown__item dropdown__item--search">Поиск по сайту</a>
+            <a href="#" class="dropdown__item dropdown__item--buy">Корзина: пока пуста</a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <h1 class="section-title">Вязание на заказ</h1>
+        <form class="order-list" method="get" action="https://echo.htmlacademy.ru">
+            <p class="text text--form">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+            <fieldset class="order-list__fieldset filter-type">
+                <legend class="order-list__legend">Тип</legend>
+                <ul>
+                    <li>
+                        <input type="radio" name="type" value="interior" id="interior" checked>
+                        <label for="battery">Аксессуар для интерьера</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="type" value="toys" id="toys">
+                        <label for="mains">Детская игрушка</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset class="order-list__fieldset filter-color">
+                <legend class="order-list__legend">Цвет</legend>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="white" name="white" value="white" checked>
+                        <label for="white">Белый</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="gray" name="gary" value="gray" checked>
+                        <label for="gray">Серый</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="tifani" name="tifani" value="tifani">
+                        <label for="tifani">"Тиффани"</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="black" name="black" value="black">
+                        <label for="black">Черный</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="rosa" name="rosa" value="rosa">
+                        <label for="rosa">Розовый</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="orange" name="orange" value="orange">
+                        <label for="orange">Оранжевый</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset class="order-list__fieldset block-name">
+                <legend class="order-list__legend">ФИО</legend>
+                <ul>
+                    <li>
+                        <label for="your-name">Имя:</label>
+                        <input type="text" id="your-name" name="name" placeholder="Введите ваше имя*" required>
+                    </li>
+                    <li>
+                        <label for="surname">Имя:</label>
+                        <input type="text" id="surname" name="surname" placeholder="Укажите фамилию*" required>
+                    </li>
+                    <li>
+                        <label for="father-name">Отчество:</label>
+                        <input type="text" id="father-name" name="father-name" placeholder="Отчество, если желаете">
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset class="order-list__fieldset block-tel">
+                <legend order-list__legend>ТЕЛ</legend>
+                <input type="tel" id="tel" name="tel" placeholder="+7 XXX XXX XX XX*" pattern="+7 -[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+            </fieldset>
+            <fieldset class="order-list__fieldset block-email">
+                <legend order-list__legend>E-MAIL</legend>
+                <input type="email" id="email" name="email" placeholder="Ваш Email*" required>
+            </fieldset>
+            <fieldset class="order-list__fieldset block-additional">
+                <legend order-list__legend>ДОП</legend>
+                <textarea placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            </fieldset>
+            <p class="order-list__required">*Поля обязательны для заполнения</p>
+            <button class="button button--buy" type="submit">Отправить заказ</button>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <ul class="social__list">
+            <li class="social__item social__item--inst"><a href="#"><span class="visually-hidden">Инстаграмм</span></a></li>
+            <li class="social__item social__item--fb"><a href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+            <li class="social__item social__item--twit"><a href="#"><span class="visually-hidden">Твиттер</span></a></li>
+        </ul>
+        <div class="copyright">
+            <a class="copyright__link" href="#">
+                <p class="copyright__title">Разработано</p>
+                <img class="copyright__img" src="#" alt="Логотип html Академии">
+            </a>
+        </div>
+    </footer>
+</body></html>
