@@ -24,7 +24,7 @@ _`.editorconfig`, `.gitattributes`, `.gitignore`, `.stylelintrc`, `.travis.yml`,
 Если у вас ещё нет аккаунта на [github.com](https://github.com/join), скорее зарегистрируйтесь.
 
 #### 2. Создайте форк
-
+ 
 [Откройте мастер-репозиторий](https://github.com/htmlacademy-adaptive/1283767-mishka-19) и нажмите кнопку «Fork» в правом верхнем углу. Репозиторий из Академии будет скопирован в ваш аккаунт.
 
 <img width="800" alt="" src="https://user-images.githubusercontent.com/10909/60808189-541c1580-a190-11e9-8c4c-459d9c0f22f5.jpg">
