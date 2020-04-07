@@ -1,0 +1,58 @@
+.promo-list {
+  margin: 0;
+  margin-top: -40px;
+  padding: 0;
+  list-style: none;
+
+  .promo-list__item {
+    padding: 26px 30px 26px 30px;
+
+    .promo-list__name {
+      width: 106px;
+      margin: 0;
+
+      .set-fontbold();
+      font-size: 19px;
+
+      a {
+        color: white;
+        text-decoration: none;
+        line-height: 24px;
+      }
+    }
+  }
+
+  .promo-list__item--interior {
+    background-color: @main-color;
+    position: relative;
+
+    &::after {
+      content: "";
+      background-image: url(../img/icon-interior.svg);
+      width: 40px;
+      height: 62px;
+      background-color: @main-color;
+      opacity: 0.5;
+      top: 23px;
+      right: 36px;
+      position: absolute;
+    }
+  }
+
+  .promo-list__item--toys {
+    background-color: #56c3b2;
+    position: relative;
+
+    &::after {
+      content: "";
+      background-image: url(../img/icon-toy.svg);
+      width: 60px;
+      height: 60px;
+      background-color: #56c3b2;
+      opacity: 0.5;
+      top: 21px;
+      right: 27px;
+      position: absolute;
+    }
+  }
+}

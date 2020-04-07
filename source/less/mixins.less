@@ -1,0 +1,51 @@
+.visually-hidden() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0)
+}
+
+.wrapper-left-right(@padding) {
+  padding-left: @padding;
+  padding-right: @padding;
+}
+
+.for-text(@font-size, @line-height) {
+  font-family: 'OpenSans', 'Tahoma', sans-serif;
+  color: @text-color;
+  font-size: @font-size;
+  line-height: @line-height;
+}
+
+.button-mobile() {
+  min-width: 260px;
+  display: block;
+  padding: 20px 85px;
+  border: 2px solid @text-color;
+
+  font-family: "OpenSansBold", "Tahoma", sans-serif;
+  color: @text-color;
+  line-height: 20px;
+  font-size: 17px;
+  text-align: center;
+}
+
+.blocks-title() {
+  margin: 0 auto;
+
+  font-family: 'OpenSansBold';
+  font-size: 25px;
+  line-height: 30px;
+  text-align: left;
+  color: black;
+}
+
+.set-fontbold() {
+  font-family: 'OpenSansBold', 'Tahoma', sans-serif;
+  font-weight: 700;
+
+}
