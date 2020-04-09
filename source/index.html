@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name=viewport content='width=device-width, initial-scale=1'>
   <title>HTML Academy: Мишка</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -10,25 +11,27 @@
 <body>
   <header class="header">
     <img class="header__logo" src="./img/logo-mobile.svg" alt="Логотип компании" width="86" height="35">
-    <nav class="dropdown header__dropdown">
-      <div class="dropdown-wrapper">
-        <ul class="dropdown__list">
-          <li class="dropdown__item dropdown__item--catalog">
-            <a class="dropdown__link" href="catalog.html">Каталог товаров</a></li>
-          <li class="dropdown__item dropdown__item--costomize">
-            <a class="dropdown__link" href="#">Вязание на заказ</a></li>
-          <li class="dropdown__item dropdown__item--search">
-            <a class="dropdown__link" href="#">Поиск по сайту</a></li>
-          <li class="dropdown__item dropdown__item--buy">
-            <a class="dropdown__link" href="form.html">Корзина: пока пуста</a></li>
-        </ul>
-      </div>
-    </nav>
+    <div class="dropdown-wrapper">
+      <span class="visually-hidden">Иконка для раскрытия списка
+      </span>
+    </div>
   </header>
+  <nav class="dropdown header__dropdown">
+    <ul class="dropdown-list">
+      <li class="dropdown-list__item dropdown-list__item--catalog">
+        <a class="dropdown-list__link" href="catalog.html">Каталог товаров</a></li>
+      <li class="dropdown-list__item dropdown-list__item--costomize">
+        <a class="dropdown-list__link" href="form.html">Вязание на заказ</a></li>
+      <li class="dropdown-list__item dropdown-list__item--search">
+        <a class="dropdown-list__link" href="#">Поиск по сайту</a></li>
+      <li class="dropdown-list__item dropdown-list__item--buy">
+        <a class="dropdown-list__link" href="#">Корзина: пока пуста</a></li>
+    </ul>
+  </nav>
 
   <main class="main">
     <section class="promo">
-      <h1 class="promo__title section-title">Милые штуки ручной работы для дома
+      <h1 class="promo__title">Милые штуки ручной работы для дома
       </h1>
     </section>
     <ul class="promo-list">
@@ -44,7 +47,7 @@
       <h2 class="popular-goods__name">Вязаные корзинки</h2>
       <p class="popular-goods__status">Товар недели</p>
       <div class="popular-goods__item">
-        <p class="text text--popular-goods">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+        <p class="text--popular-goods">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
         <table class="popular-goods__table">
           <caption class="table-caption">Характреристика модели товара</caption>
           <tr>
@@ -62,7 +65,7 @@
         </table>
         <img class="popular-goods__img" src="./img/triple-set-mobile@1x.jpg" alt="Фото вязаной корзинки" width="260" height="315">
         <p class="popular-goods__price">Цена: 990 руб</p>
-        <a class="button button--order">Заказать</a>
+        <a class="button button--order popular-goods__button">Заказать</a>
       </div>
     </section>
 
@@ -94,7 +97,7 @@
       <h2 class="reviews__title">Отзывы</h2>
       <div class="reviews-item">
         <blockquote class="reviews-item__blockquote">
-          <p class="text text--reviews">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+          <p>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
           <cite>
             <span class="reviews-item__name"> Анастасия Красильникова</span>
             <a class="reviews-item__link" href="#">@misssssiskras</a>
@@ -104,7 +107,7 @@
           <button class="reviews__arrow reviews__arrow--left"></button>
           <button class="reviews__arrow reviews__arrow--right"></button>
         </div>
-        <a class="button button--review">Написать</a>
+        <a class="button button--reviews reviews__button">Написать</a>
       </div>
     </section>
 
@@ -119,7 +122,7 @@
         <p>г.Санкт-Петербург, ул. Большая Конюшенная, д.19/8, офис 101</p>
       </div>
       <img class="contacts__img" src="./img/map-mobile@1x.jpg" alt="Адрес: г.Санкт-Петербург, ул. Большая Конюшенная, д.19/8, офис 101" width="322" height="457">
-      <a class="button button--letter">Напишите нам</a>
+      <a class="button button--letter contacts__button">Напишите нам</a>
     </section>
   </main>
 

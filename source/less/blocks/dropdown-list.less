@@ -1,0 +1,48 @@
+.dropdown-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.dropdown-list__item {
+  padding: 27px 76px;
+  .for-text(17px, 24px);
+  .set-fontbold();
+  border: 1px solid #ececec;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    opacity: 0.5;
+  }
+}
+
+.dropdown-list__item--search {
+  &::before {
+    background-image: url('../../img/search-svg.svg');
+    top: calc(50% - 10px);
+    left: 30px;
+    ;
+    width: 21px;
+    height: 21px;
+    background-repeat: no-repeat;
+  }
+}
+
+.dropdown-list__item--buy {
+  &::before {
+    background-image: url('../../img/cart-svg.svg');
+    top: calc(50% - 10px);
+    left: 30px;
+    ;
+    width: 21px;
+    height: 18px;
+    background-repeat: no-repeat;
+  }
+}
