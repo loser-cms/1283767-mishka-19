@@ -1,0 +1,43 @@
+.manufactoring {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border: 1px solid #ececec;
+  margin-top: 30px;
+}
+
+.manufactoring__title {
+  .set-fontbold();
+  .for-text(17px, 24px);
+  margin: 0;
+  padding-left: 91px;
+  padding-right: 43px;
+  text-align: left;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 32px;
+    height: 22px;
+    position: absolute;
+    left: 34px;
+    top: calc(50% - 11px);
+    background-color: @main-color;
+  }
+}
+
+.manufactoring__video {
+  margin-top: 26px;
+}
+
+.manufactoring__text {
+  .for-text(13px, 24px);
+  margin: 0;
+}
+
+.manufactoring__button {
+  margin-top: 30px;
+}
+
+.manufactoring__wrapper{
+  .wrapper-all-side(30px);
+}

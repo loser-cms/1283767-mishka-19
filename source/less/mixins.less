@@ -1,0 +1,48 @@
+.visually-hidden() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0)
+}
+
+.wrapper-left-right(@padding) {
+  padding-left: @padding;
+  padding-right: @padding;
+}
+
+.wrapper-all-side(@padding) {
+  padding: @padding;
+}
+
+.for-text(@font-size, @line-height) {
+  font-family: 'OpenSans', 'Tahoma', sans-serif;
+  color: @text-color;
+  font-size: @font-size;
+  line-height: @line-height;
+}
+
+.button-mobile() {
+  display: block;
+  padding: 16px 25px;
+  max-width: 270px;
+  border: 2px solid @text-color;
+}
+
+.blocks-title() {
+  margin: 0 auto;
+
+  font-family: OpenSans, Tahoma, sans-serif;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: left;
+  color: black;
+  font-weight: 700;
+}
+
+.set-fontbold() {
+  font-weight: 700;
+}

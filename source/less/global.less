@@ -1,0 +1,49 @@
+body {
+  min-width: 320px;
+  margin: 0 auto;
+  background-color: @background-color;
+  font-family: OpenSans, Tahoma, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.dropdown-wrapper {
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/menu-svg.svg);
+}
+
+.button {
+  margin-left: auto;
+  margin-right: auto;
+  .button-mobile();
+  font-family: OpenSans, Tahoma, sans-serif;
+  .set-fontbold();
+  text-align: center;
+  line-height: 16px;
+  font-size: 17px;
+  background-color: white;
+  text-transform: uppercase;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0)
+}
+
+.section-title {
+  margin: 0;
+  padding: 76px 43px;
+  background-color: @footer-color;
+  .blocks-title();
+  text-align: center;
+}
