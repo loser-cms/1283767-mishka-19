@@ -1,0 +1,121 @@
+.order-filter__text {
+  margin: 0;
+  .for-text(13px, 1.8);
+}
+
+.order-filter__fieldset {
+  border: none;
+  border-top: 1px solid @main-color;
+  padding: 0;
+  padding-top: 25px;
+  margin-top: 30px;
+  .for-text(17px, 1.05);
+  .set-fontbold();
+
+  .order-filter__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  textarea {
+    width: 100%;
+    min-height: 142px;
+    max-height: 400px;
+    border: 2px solid #444444;
+  }
+}
+
+.order-filter__legend {
+  .set-fontbold();
+  .for-text(17px, 16px);
+  color: @form-fieldset-color;
+}
+
+.order-filter__required {
+  .for-text(14px, 16px);
+  margin: 0;
+  margin-top: 18px;
+}
+
+.order-filter input {
+  .for-text (17px, 1.05);
+  color: rgba(68, 68, 68, 0.3);
+}
+
+.order-filter__button {
+  margin-top: 30px;
+}
+
+
+@media (min-width: @tablet-width) {
+  .order-filter {
+    padding-bottom: 50px;
+  }
+
+  .order-filter__text {
+    .for-text(17px, 1.8);
+  }
+
+
+
+  .order-filter input {
+    .for-text (19px, 18px);
+    color: rgba(68, 68, 68, 0.3);
+  }
+
+
+
+  .order-filter__fieldset {
+    .for-text(19px, 18px);
+    color: black;
+    border: none;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 0;
+
+    .order-filter__legend {
+      margin: 0;
+      float: left;
+      width: 70px;
+    }
+
+    textarea {
+      width: 65%;
+      height: 141px;
+    }
+
+    .order-filter__list--type,
+    .order-filter__list--name {
+      flex-direction: column;
+    }
+  }
+
+  .order-filter__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+
+      li {
+        width: 50%;
+      }
+    }
+  
+  .order-filter .order-filter__required {
+    float: right;
+    margin: 0;
+  }
+
+  .order-filter .order-filter__button {
+    margin: 0;
+    float: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .order-filter__list {
+    li {
+      width: 30%;
+    }
+  }
+}

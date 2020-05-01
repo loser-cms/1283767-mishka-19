@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-
+  flex-basis: 100%;
   a {
     text-decoration: none;
     color: black;
@@ -46,3 +46,18 @@
     background-repeat: no-repeat;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .dropdown-list {
+  margin-top: 0px;
+  display: flex;
+}
+  .dropdown-list__item {
+    padding: 0;
+    .for-text(15px, 24px);
+    border: none;
+    margin-right: 37px;
+  }
+}
+
+
