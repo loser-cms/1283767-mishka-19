@@ -1,3 +1,19 @@
 .footer {
   background-color: @footer-color;
 }
+
+.footer__logo {
+  display: none;
+}
+
+@media(min-width: @tablet-width){
+  .footer__logo {
+    display: block;
+  }
+  .footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 143px;
+  }
+}

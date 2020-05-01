@@ -1,13 +1,57 @@
-.promo {
+.promo--index {
   background-image: url(../img/hero-mobile@1x.jpg);
   min-height: 273px;
   background-repeat: no-repeat;
   padding-top: 76px;
   background-position: center 0;
+  background-size: 575px 373px;
+}
+
+@media (min-resolution: 1.5dppx) {
+  .promo--index {
+    background-image: url(../../img/hero-mobile@2x.png);
+  }
+}
+
+.promo--catalog {
+  min-height: 177px;
+  background-color: #f1f1f1;
+  padding-top: 76px;
+  box-sizing: border-box
 }
 
 .promo__title {
-  .blocks-title();
+  .blocks-title(27px, 1.1);
   padding: 0 39px;
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    margin-top: -49px;
+    .wrapper-left-right(50px);
+  }
+
+  .promo--index {
+    background-image: url(../../img/hero-tablet@1x.jpg);
+    background-size: 100% 746px;
+    padding-top: 160px;
+    min-height: 746px;
+  }
+
+  .promo--catalog {
+    min-height: 226px;
+    padding-top: 106px;
+  }
+
+  .promo__title {
+    .blocks-title(43px, 1.16);
+    text-align: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    margin-top: -79px;
+  }
 }
