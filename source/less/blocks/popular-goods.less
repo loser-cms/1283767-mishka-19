@@ -2,6 +2,19 @@
   .wrapper-left-right (30px);
   padding-top: 29px;
   background-color: white;
+  padding-bottom: 40px;
+  position: relative;
+  &::after{
+    content: "";
+    width: 100%;
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    background-image: url(../../img/bg-zigzag-line.svg);
+    background-repeat: repeat-x;
+    position: absolute;
+    background-size: contain;
+  }
 }
 
 .popular-goods__name {
@@ -11,6 +24,7 @@
 
 .popular-goods__status {
   margin: 0px;
+  margin-top: 5px;
   text-transform: uppercase;
   .for-text(17px, 1.18);
   color: @main-color;
@@ -19,19 +33,27 @@
 
 .popular-goods__text {
   margin: 0;
-  margin-top: 30px;
+  margin-top: 25px;
   .for-text(15px, 24px);
 }
 
 .popular-goods__table {
-  margin-top: 30px;
+  margin-top: 15px;
   width: 100%;
   border-collapse: collapse;
   .for-text(15px, 1.33);
 
   tr {
     min-height: 39px;
-    border-bottom: 1px solid gray
+    border-bottom: 1px solid #ececec
+  }
+  
+  td {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    &:nth-of-type(2n){
+      padding-left: 15px;
+    }
   }
 }
 
@@ -47,11 +69,12 @@
 
 .popular-goods__img img {
   width: 100%;
+  display: block;
 }
 
 .popular-goods__price {
   margin: 0 auto;
-  margin-top: 29px;
+  margin-top: 25px;
   min-width: 130px;
   color: @text-color;
   order: 3;
@@ -59,7 +82,6 @@
   .set-fontbold();
   font-size: 17px;
   line-height: 24px;
-  text-align: center;
 }
 
 .table-caption {
@@ -67,8 +89,12 @@
 }
 
 .popular-goods__button {
-  margin-top: 28px;
-  order: 4
+  margin-top: 25px;
+  order: 4;
+}
+
+.button {
+   width: 259px;
 }
 
 @media (min-width: @tablet-width) {

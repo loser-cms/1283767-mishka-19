@@ -1,6 +1,18 @@
 .header {
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.header__toggle {
+  display: block;
+  width: 20px;
+  height: 14px;
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  background: none;
+  border: none;
 }
 
 .header__list {
@@ -11,28 +23,32 @@
 
 .header__item {
   padding: 27px 76px;
+  padding-right: 20px;
   .for-text(17px, 24px);
   .set-fontbold();
   border-top: 1px solid #ececec;
   position: relative;
-
+  padding-left: calc(50% - 83px);
   a {
     .blocks-title(17px; 1.4);
     text-decoration: none;
   }
-
-  &::before {
-    content: "";
-    position: absolute;
-    opacity: 0.5;
+}
+    
+    .header__list--search a {
+      position: relative;
+      &::before {
+      content: "";
+      position: absolute;
+      opacity: 0.3;
   }
 }
 
-.header__item--search {
+.header__item--search a {
   &::before {
     background-image: url('../../img/search-svg.svg');
-    top: calc(50% - 10px);
-    left: 30px;
+    top: 4px;
+    left: -44px;
     ;
     width: 21px;
     height: 21px;
@@ -40,11 +56,11 @@
   }
 }
 
-.header__item--buy {
+.header__item--buy a {
   &::before {
     background-image: url('../../img/cart-svg.svg');
-    top: calc(50% - 10px);
-    left: 30px;
+    top: 4px;
+    left: -46px;
     ;
     width: 21px;
     height: 18px;
@@ -58,9 +74,10 @@
 
 .header__logo {
   order: -2;
-  padding-top: 20px;
+  padding-top: 24px;
   padding-bottom: 20px;
   margin: 0 auto;
+  height: 35px;
 }
 
 .header__text {
@@ -75,6 +92,39 @@
   margin-right: 30px;
 }
 
+@media(max-width: @mobile-width-only){
+  .header__list--opened {
+    display: block;
+  }
+  
+  .header__list--closed {
+    display: none;
+  }
+  
+  .header__toggle{
+    &::before {
+      content: "";
+      width: 21px;
+      height: 20px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-image: url(../../img/menu-close-svg.svg)
+;
+    background-repeat: no-repeat;}
+  }
+  
+  .header__list--closed + .header__toggle {
+    &::before{
+      width: 20px;
+      height: 14px;
+     background-image: url(../../img/menu-svg.svg)
+;
+    }
+  }
+}
+
+
 /* Планшетная версия */
 @media (min-width: @tablet-width) {
   .header {
@@ -86,7 +136,6 @@
   .header__logo {
     padding-left: 50px;
     box-sizing: border-box;
-    border-bottom: 1px solid #ececec;
     flex-basis: 48%;
     margin: 0;
     display: block;
@@ -111,6 +160,7 @@
     li {
       padding: 0;
       margin-right: 37px;
+      
     }
 
     a {

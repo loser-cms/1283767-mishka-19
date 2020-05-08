@@ -1,5 +1,5 @@
 .contacts {
-  padding-top: 44px;
+  padding-top: 35px;
   padding-bottom: 39px;
   display: flex;
   flex-direction: column;
@@ -14,21 +14,28 @@
   .blocks-title(18px, 1.7);
 }
 
-.contacts__item--email{
-  margin-top: 42px;
-  .for-text(15px, 30px)
+.contacts__item--email, .contacts__item--address{
+  margin-top: 30px;
+  .for-text(15px, 30px);
+  display: flex;
+  p:nth-child(2){
+    margin-left: 32px;
+  }
+  p {
+    margin: 0;
+  }
 }
 
-.contacts__item--address{
-  margin-top: 42px;
-  .for-text(15px, 30px)
+.contacts__item--address p:nth-child(2){
+  padding-right: 40px;
 }
 
 .contacts__img {
   width: 100%;
-  margin-top: 42px;
+  margin-top: 35px;
   img{
     width: 100%;
+    display: block;
   }
 }
 

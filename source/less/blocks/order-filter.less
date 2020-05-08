@@ -31,6 +31,26 @@
   .for-text(17px, 16px);
   color: @form-fieldset-color;
 }
+.order-filter__list--type label {
+position: relative;}
+.order-filter__list--type label::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: red;
+}
+
+.order-filter__list--type input:checked ~ label::before{
+  background-color: gold;
+}
+
+.order-filter__list--type input:focus ~ label::before {
+  background-color: green;
+}
 
 .order-filter__required {
   .for-text(14px, 16px);
@@ -41,6 +61,9 @@
 .order-filter input {
   .for-text (17px, 1.05);
   color: rgba(68, 68, 68, 0.3);
+  display: block;
+  border: none;
+  border-bottom: 2px solid black 
 }
 
 .order-filter__button {

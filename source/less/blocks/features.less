@@ -1,6 +1,6 @@
 .features {
-  padding-top: 34px;
-  padding-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 20px;
   .wrapper-left-right(30px);
 }
 
@@ -14,7 +14,7 @@
 
   list-style: none;
   margin: 0;
-  margin-top: 31px;
+  margin-top: 25px;
   padding: 0;
 }
 
@@ -23,10 +23,12 @@
   font-size: 17px;
   line-height: 20px;
   text-align: left;
+  margin-top: 30px;
 }
 
 .features__item {
   position: relative;
+  margin-top: 30px;
 
   .set-fontbold();
   line-height: 20px;
@@ -35,57 +37,78 @@
 
   &::before {
     content: "";
-    top: 0px;
-    left: 0px;
     position: absolute;
+    background-repeat: no-repeat;
   }
 }
 
 .features__item--environmental {
+  padding-right: 65px;
   &::before {
     background-image: url(../img/icon-1-svg.svg);
     width: 33px;
-    height: 32px;
+    height: 40px;
+    top: -25px;
+    left: 10px;
   }
 }
 
 .features__item--style {
+  padding-right: 60px;
+  padding-top: 5px;
   &::before {
     background-image: url(../img/icon-3-svg.svg);
     width: 47px;
     height: 27px;
+    top: -18px;
+    left: 0px;
   }
 }
 
 .features__item--likes {
+  padding-right: 60px;
+  padding-top: 5px;
   &::before {
     background-image: url(../img/icon-5-svg.svg);
     width: 34px;
     height: 27px;
+    top: -10px;
+    left: 5px;
   }
 }
 
 .features__item--widthLove {
+  padding-right: 50px;
+  padding-top: 8px;
   &::before {
     background-image: url(../img/icon-2-svg.svg);
     width: 35px;
     height: 34px;
+    top: -12px;
+    left: 3px;
   }
 }
 
 .features__item--enterprise {
+  padding-top: 7px;
   &::before {
     background-image: url(../img/icon-4-svg.svg);
     width: 55px;
     height: 23px;
+    top: -13px;
+    left: -5px;
   }
 }
 
 .features__item--wrapper {
+  padding-right: 50px;
+  padding-top: 6px;
   &::before {
     background-image: url(../img/icon-6-svg.svg);
     width: 33px;
     height: 32px;
+    top: -15px;
+    left: 3px;
   }
 }
 
