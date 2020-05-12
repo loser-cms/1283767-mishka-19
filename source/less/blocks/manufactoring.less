@@ -19,14 +19,25 @@
     width: 32px;
     height: 30px;
     position: absolute;
-    left: 0;
-    top: center;
+    left: 4px;
+    top: 10px;
     background-image: url(../../img/video-svg.svg);
   }
 }
 
 .manufactoring__video {
   display: block;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 35px);
+    left: calc(50% - 50px);
+    background-image: url(../../img/play-svg.svg);
+    background-repeat: no-repeat;
+    width: 101px;
+    height: 80px;
+  }
   img {
     width: 100%
   }
@@ -37,10 +48,11 @@
 .manufactoring__text {
   .for-text(13px, 24px);
   margin: 0;
+  padding-right: 15px;
 }
 
 .manufactoring__button {
-  margin-top: 30px;
+  margin-top: 25px;
   width: 192px;
   padding-left: 10px;
   padding-right: 10px;
@@ -48,6 +60,8 @@
 
 .manufactoring__wrapper{
   .wrapper-all-side(30px);
+  padding-bottom: 25px;
+  padding-top: 25px;
 }
 
 @media (min-width: @tablet-width){

@@ -8,7 +8,7 @@
   border-top: 1px solid @main-color;
   padding: 0;
   padding-top: 25px;
-  margin-top: 30px;
+  margin-top: 20px;
   .for-text(17px, 1.05);
   .set-fontbold();
 
@@ -27,35 +27,181 @@
 }
 
 .order-filter__legend {
+  padding: 0;
+  width: 25%;
   .set-fontbold();
   .for-text(17px, 16px);
   color: @form-fieldset-color;
 }
-.order-filter__list--type label {
-position: relative;}
-.order-filter__list--type label::before {
-  content: "";
-  width: 20px;
-  height: 20px;
-  border: 2px solid black;
-  top: 0;
-  left: 0;
-  position: absolute;
-  background-color: red;
+
+.order-filter__list--type label, .order-filter__list--color label {
+  position: relative;
+  display: block; 
 }
 
-.order-filter__list--type input:checked ~ label::before{
-  background-color: gold;
+.order-filter__list--type label{
+  margin-top: 10px;
+  box-sizing: border-box;
 }
 
-.order-filter__list--type input:focus ~ label::before {
-  background-color: green;
+.order-filter__list--type {
+  li {
+    padding-left: 62px;
+    margin-bottom: 25px
+  };
+
+  label::before {
+    content: "";
+    width: 35px;
+    height: 35px;
+    border: 2px solid black;
+    border-radius: 50%;
+    top: -10px;
+    left: -62px;
+    position: absolute;
+  }
+
+  label::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: 2px;
+    left: -50px;
+    position: absolute;
+    background-color: #62d1ba;
+    display: none;
+  }
+}
+
+.order-filter__list--type input {
+  .visually-hidden();
+}
+
+.order-filter__list--type input:checked ~ label::after {
+  display: block;
+}
+
+.order-filter__fieldset--color{
+  margin-top: 20px;
+}
+
+.order-filter__list--color input {
+  .visually-hidden();
+}
+
+.order-filter__list--color li {
+  min-height: 40px;
+  margin-bottom: 20px;
+  padding-left: 60px;
+  label {
+    display: block;
+    margin-top: 10px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      border: 2px solid black;
+      top: -5px;
+      left: -60px;
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 16px;
+      background-image: url(../../img/tick-mobile-svg.svg);
+      background-repeat: no-repeat;
+      top: 2px;
+      left: -50px;
+      display: none;
+    }
+  }
+}
+
+.order-filter__list--color input:checked ~ label::after {
+  display: block;
+}
+
+.order-filter__fieldset--name {
+  margin: 0;
+  margin-top: 5px;
+  .order-filter__list--name{
+    margin-top: 5px;
+  }
+}
+
+.order-filter__list--name, .order-filter__fieldset--tel{
+  input {
+  margin-top: 15px;
+  padding-bottom: 14px;
+  width: 100%;
+}
+  li {
+    margin-bottom: 20px;
+  }
+}
+
+
+.order-filter__fieldset--tel {
+  margin-top: 10px;
+  padding-top: 17px;
+  position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 32px;
+      width: 30px;
+      height: 30px;
+      background-image: url(../../img/icon-phone.svg);
+      background-repeat: no-repeat;
+      opacity: 0.3;
+    }
+  input {
+    margin: 0;
+  }
+}
+
+.order-filter__fieldset--email {
+  margin: 0;
+  margin-top: 35px;
+  padding-top: 20px;
+  position: relative;
+  &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 32px;
+      width: 40px;
+      height: 30px;
+      background-image: url(../../img/icon-mail.svg);
+      background-repeat: no-repeat;
+      opacity: 0.3;
+    }
+  input {
+    width: 100%;
+    padding-bottom: 15px;
+  }
+}
+
+.order-filter__fieldset--additional {
+  margin: 0;
+  margin-top: 30px;
+  textarea {
+    .for-text(17px, 1.05);
+    .wrapper-left-right(15px);
+    padding-top: 15px;
+    box-sizing: border-box;
+  }
 }
 
 .order-filter__required {
   .for-text(14px, 16px);
   margin: 0;
-  margin-top: 18px;
+  margin-top: 15px;
 }
 
 .order-filter input {
@@ -63,7 +209,7 @@ position: relative;}
   color: rgba(68, 68, 68, 0.3);
   display: block;
   border: none;
-  border-bottom: 2px solid black 
+  border-bottom: 2px solid black
 }
 
 .order-filter__button {
@@ -115,15 +261,15 @@ position: relative;}
   }
 
   .order-filter__list {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
 
-      li {
-        width: 50%;
-      }
+    li {
+      width: 50%;
     }
-  
+  }
+
   .order-filter .order-filter__required {
     float: right;
     margin: 0;

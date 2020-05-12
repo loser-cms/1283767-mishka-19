@@ -11,8 +11,10 @@
   position: absolute;
   right: 32px;
   top: 32px;
-  background: none;
+  background-image: url(../../img/menu-svg.svg);
   border: none;
+  background-repeat: no-repeat;
+  background-color: white;
 }
 
 .header__list {
@@ -29,18 +31,20 @@
   border-top: 1px solid #ececec;
   position: relative;
   padding-left: calc(50% - 83px);
+
   a {
     .blocks-title(17px; 1.4);
     text-decoration: none;
   }
 }
-    
-    .header__list--search a {
-      position: relative;
-      &::before {
-      content: "";
-      position: absolute;
-      opacity: 0.3;
+
+.header__list--search a {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    opacity: 0.3;
   }
 }
 
@@ -92,38 +96,25 @@
   margin-right: 30px;
 }
 
-@media(max-width: @mobile-width-only){
-  .header__list--opened {
-    display: block;
+@media(max-width: @mobile-width-only) {
+  .header__no-js {
+    .header__list:not(.header__list--sale) {
+      display: block;
+    }
   }
-  
-  .header__list--closed {
-    display: none;
+
+  .header__closed {
+    .header__list {
+      display: none;
+    }
   }
-  
-  .header__toggle{
-    &::before {
-      content: "";
-      width: 21px;
-      height: 20px;
-      position: absolute;
-      right: 0;
-      top: 0;
-      background-image: url(../../img/menu-close-svg.svg)
-;
-    background-repeat: no-repeat;}
-  }
-  
-  .header__list--closed + .header__toggle {
-    &::before{
-      width: 20px;
-      height: 14px;
-     background-image: url(../../img/menu-svg.svg)
-;
+
+  .header__open {
+    .header__list:not(.header__list--sale) {
+      display: block;
     }
   }
 }
-
 
 /* Планшетная версия */
 @media (min-width: @tablet-width) {
@@ -157,10 +148,11 @@
     margin-top: 24px;
     margin-left: 50px;
     justify-content: flex-start;
+
     li {
       padding: 0;
       margin-right: 37px;
-      
+
     }
 
     a {
@@ -178,8 +170,8 @@
   .header__list .header__item--buy {
     padding-right: 50px;
     padding-left: 83px;
-}
-  
+  }
+
   .header__item--search a {
     display: none
   }
@@ -203,17 +195,18 @@
 }
 
 @media (min-width: @desktop-width) {
-  .header {
-  }
-  
+  .header {}
+
   .header__list--sale {
     display: block;
     order: -1;
     flex-basis: 50%;
     display: flex;
+
     li {
       padding-left: 50px;
       padding-right: 10px;
+
       a {
         .blocks-title (15px; 1.6)
       }
@@ -228,13 +221,13 @@
   .header__list--search {
     flex-basis: 36%
   }
-  
+
   .header__list--catalog {
     order: -3;
     flex-basis: 36%;
     border-bottom: 1px solid #ececec;
     margin: 0;
-    
+
     li {
       padding-left: 35px;
       margin: 0;
@@ -242,6 +235,7 @@
       padding-bottom: 30px;
       padding-right: 25px;
       .blocks-title(17px; 1.4);
+
       &:first-of-type {
         border-right: 1px solid #ececec;
         padding-right: 35px;

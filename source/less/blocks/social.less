@@ -1,11 +1,20 @@
 .social {
   display: flex;
   list-style: none;
-  align-items: center;
   margin: 0;
-  padding-top: 25px;
+  padding-top: 20px;
   padding-bottom: 55px;
-  margin-left: 50px;
+  position: relative;
+  justify-content: center;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    bottom: 0;
+    left: 10%;
+    height: 1px;
+    background-color: #e5e5e5;
+  }
 }
 
 .social__item {
