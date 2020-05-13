@@ -34,12 +34,13 @@
   color: @form-fieldset-color;
 }
 
-.order-filter__list--type label, .order-filter__list--color label {
+.order-filter__list--type label,
+.order-filter__list--color label {
   position: relative;
-  display: block; 
+  display: block;
 }
 
-.order-filter__list--type label{
+.order-filter__list--type label {
   margin-top: 10px;
   box-sizing: border-box;
 }
@@ -48,7 +49,9 @@
   li {
     padding-left: 62px;
     margin-bottom: 25px
-  };
+  }
+
+  ;
 
   label::before {
     content: "";
@@ -82,7 +85,7 @@
   display: block;
 }
 
-.order-filter__fieldset--color{
+.order-filter__fieldset--color {
   margin-top: 20px;
 }
 
@@ -94,10 +97,12 @@
   min-height: 40px;
   margin-bottom: 20px;
   padding-left: 60px;
+
   label {
     display: block;
     margin-top: 10px;
     position: relative;
+
     &::before {
       content: "";
       position: absolute;
@@ -107,7 +112,8 @@
       top: -5px;
       left: -60px;
     }
-    &::after{
+
+    &::after {
       content: "";
       position: absolute;
       width: 20px;
@@ -128,17 +134,20 @@
 .order-filter__fieldset--name {
   margin: 0;
   margin-top: 5px;
-  .order-filter__list--name{
+
+  .order-filter__list--name {
     margin-top: 5px;
   }
 }
 
-.order-filter__list--name, .order-filter__fieldset--tel{
+.order-filter__list--name,
+.order-filter__fieldset--tel {
   input {
-  margin-top: 15px;
-  padding-bottom: 14px;
-  width: 100%;
-}
+    margin-top: 15px;
+    padding-bottom: 14px;
+    width: 100%;
+  }
+
   li {
     margin-bottom: 20px;
   }
@@ -149,17 +158,19 @@
   margin-top: 10px;
   padding-top: 17px;
   position: relative;
-    &::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      top: 32px;
-      width: 30px;
-      height: 30px;
-      background-image: url(../../img/icon-phone.svg);
-      background-repeat: no-repeat;
-      opacity: 0.3;
-    }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 32px;
+    width: 30px;
+    height: 30px;
+    background-image: url(../../img/icon-phone.svg);
+    background-repeat: no-repeat;
+    opacity: 0.3;
+  }
+
   input {
     margin: 0;
   }
@@ -170,17 +181,19 @@
   margin-top: 35px;
   padding-top: 20px;
   position: relative;
+
   &::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      top: 32px;
-      width: 40px;
-      height: 30px;
-      background-image: url(../../img/icon-mail.svg);
-      background-repeat: no-repeat;
-      opacity: 0.3;
-    }
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 32px;
+    width: 40px;
+    height: 30px;
+    background-image: url(../../img/icon-mail.svg);
+    background-repeat: no-repeat;
+    opacity: 0.3;
+  }
+
   input {
     width: 100%;
     padding-bottom: 15px;
@@ -190,6 +203,7 @@
 .order-filter__fieldset--additional {
   margin: 0;
   margin-top: 30px;
+
   textarea {
     .for-text(17px, 1.05);
     .wrapper-left-right(15px);

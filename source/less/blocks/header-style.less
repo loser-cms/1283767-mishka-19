@@ -2,19 +2,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-}
-
-.header__toggle {
-  display: block;
-  width: 20px;
-  height: 14px;
-  position: absolute;
-  right: 32px;
-  top: 32px;
-  background-image: url(../img/menu-svg.svg);
-  border: none;
-  background-repeat: no-repeat;
-  background-color: white;
+  border-bottom: 1px solid #ececec;
 }
 
 .header__list {
@@ -101,17 +89,46 @@
     .header__list:not(.header__list--sale) {
       display: block;
     }
+    .header__toggle {
+      display: none;
+    }
   }
 
   .header__closed {
     .header__list {
       display: none;
     }
+
+    .header__toggle {
+      display: block;
+      width: 20px;
+      height: 14px;
+      position: absolute;
+      right: 32px;
+      top: 32px;
+      background-image: url(../img/menu-svg.svg);
+      border: none;
+      background-repeat: no-repeat;
+      background-color: white;
+    }
   }
 
   .header__open {
     .header__list:not(.header__list--sale) {
       display: block;
+    }
+
+    .header__toggle {
+      display: block;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      right: 32px;
+      top: 32px;
+      background-image: url(../img/menu-close-svg.svg);
+      border: none;
+      background-repeat: no-repeat;
+      background-color: white;
     }
   }
 }
@@ -122,8 +139,13 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    border-bottom: none;
   }
 
+  .header__toggle {
+    .visually-hidden();
+  }
+  
   .header__logo {
     padding-left: 50px;
     box-sizing: border-box;
